@@ -7,10 +7,8 @@ This highlights market periods where price behavior deviates from learned histor
 
 ---
 
-## Overview
+## Problem Statement
 Financial time series frequently exhibit irregular behavior driven by macroeconomic events, firm-specific announcements, volatility spikes, or systemic shocks. Detecting these anomalies is valuable for risk management, early warning systems, and investment decision support. 
-
-This project focuses on detecting abnormal price patterns in historical Tesla (TSLA) stock data. The solution uses an LSTM Autoencoder to learn baseline temporal dynamics and flag deviations via reconstruction error.
 
 ---
 
