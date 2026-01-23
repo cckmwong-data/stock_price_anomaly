@@ -7,8 +7,10 @@ This highlights market periods where price behavior deviates from learned histor
 
 ---
 
-## Problem Statement
-Financial time series frequently exhibit irregular behavior driven by macroeconomic events, firm-specific announcements, volatility spikes, or systemic shocks. Detecting these anomalies is valuable for risk management, early warning systems, and investment decision support. 
+## Overview
+Financial markets are highly dynamic and influenced by numerous factors, including macroeconomic indicators, investor sentiment, and global events. Detecting anomalies in stock prices is essential for uncovering unusual patterns that may signal market manipulation, financial fraud, or rare investment opportunities.
+
+Long Short-Term Memory (LSTM) autoencoder is used to reconstruct stock price sequences. If the model struggles to accurately reconstruct a sequence (i.e., produces a large reconstruction error), the sequence likely contains anomalous behavior. Anomalies are flagged when the deviation between the actual and reconstructed price exceeds the 95th percentile of the historical reconstruction error which is represented by Mean Absolute Error (MAE). This thresholding strategy highlights only the most unusual price movements. 
 
 ---
 
@@ -60,7 +62,7 @@ This setup simulates realistic financial data workflows and preserves temporal o
 
 ## Model Evaluation
 
-We evaluate the model by comparing the reconstruction errors of the training data and test data, with the latter showing a significantly higher **Mean Absolute Error (MAE)** due to the presence of anomalies. 
+We evaluate the model by comparing the reconstruction errors of the training data and test data, with the latter showing a significantly higher MAE due to the presence of anomalies. 
 
 <img src="./images/MAE_train.png" width="" height="400">
 
@@ -73,7 +75,7 @@ Additionally, the **training loss** (blue curve) remains low and steady showing 
 ---
 
 ## Results Summary
-The anomaly detection pipeline identified periods where reconstruction error spiked, indicating deviations from learned baseline behavior. These anomalies aligned with major market events as follows.
+The anomaly detection pipeline identified periods where reconstruction error spiked over the threshold, indicating deviations from learned baseline behavior. These anomalies aligned with major market events as follows.
 
 - **Nov 2024**: Share prices surged on optimism of Donald Trump's election victory.
 
