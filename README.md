@@ -1,7 +1,7 @@
 # Tesla Time Series Anomaly Detection with LSTM Autoencoder
 
 This project implements an unsupervised anomaly detection pipeline using an **LSTM Autoencoder** to identify abnormal movements in Tesla’s stock price time series based on **reconstruction error** between 2015 and 2025. 
-The system highlights market periods where price behavior deviates from learned historical patterns.
+This highlights market periods where price behavior deviates from learned historical patterns.
 
 <img src="./images/stock_prices.png" width="" height="500">
 
@@ -10,7 +10,7 @@ The system highlights market periods where price behavior deviates from learned 
 ## Overview
 Financial time series frequently exhibit irregular behavior driven by macroeconomic events, firm-specific announcements, volatility spikes, or systemic shocks. Detecting these anomalies is valuable for risk management, early warning systems, and investment decision support. 
 
-This project focuses on detecting abnormal price patterns in historical Tesla (TSLA) stock data without labeled anomalies. The solution uses an LSTM Autoencoder to learn baseline temporal dynamics and flag deviations via reconstruction error. The work demonstrates how data-driven modeling can surface market regime shifts and event-driven volatility.
+This project focuses on detecting abnormal price patterns in historical Tesla (TSLA) stock data. The solution uses an LSTM Autoencoder to learn baseline temporal dynamics and flag deviations via reconstruction error.
 
 ---
 
