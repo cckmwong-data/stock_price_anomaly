@@ -15,70 +15,79 @@ This project focuses on detecting abnormal price patterns in historical Tesla (T
 ---
 
 ## Skills Demonstrated
-- Time Series Modeling
-- Deep Learning (LSTM Autoencoders)
-- Machine Learning Model Training & Evaluation
-- Real-world Data Retrieval & API Usage (Yahoo Finance)
-- Anomaly Detection & Reconstruction Error Thresholding
-- Engineered preprocessing pipeline including scaling, windowing, and reconstruction thresholding
+✔ Time Series Modeling
+
+✔ Deep Learning (LSTM Autoencoders)
+
+✔ Machine Learning Model Training & Evaluation
+
+✔ Real-world Data Retrieval & API Usage (Yahoo Finance)
+
+✔ Anomaly Detection & Reconstruction Error Thresholding
+
+✔ Engineered preprocessing pipeline including scaling, windowing, and reconstruction thresholding
+
+---
+
+## Data
+Historical daily price data for Tesla (TSLA) was retrieved via Yahoo Finance. The dataset includes open, high, low, close, adjusted close, and volume fields. The closing price was selected as the primary target series for anomaly detection due to its common use in financial modeling and price-based analysis.
+
+Data pre-processing steps included:
+- Scaling using Min-Max normalization
+- Sliding window segmentation for sequence modeling
+- Train-test splitting without label supervision
+- Reconstruction error computation for anomaly scoring
+
+This setup simulates realistic financial data workflows and preserves temporal ordering.
 
 ---
 
 ## Key Technical Decisions (with Alternatives and Rationale)
 
-**Unsupervised anomaly detection vs. supervised classification**  
-Alternative: Supervised classification requires labeled anomalies, which are scarce and subjective in financial contexts.  
-Rationale: Unsupervised learning enables detection of rare or previously unseen patterns without manual annotation.
+**Unsupervised anomaly detection (LSTM Autoencoder) vs. supervised classification**: Supervised classification requires labeled anomalies, which are scarce and subjective in financial contexts.  Unsupervised learning enables detection of rare or previously unseen patterns without manual annotation.
 
-**LSTM Autoencoder vs. classical statistical models (e.g., ARIMA)**  
-Alternative: ARIMA handles linear and stationary signals but struggles with nonlinear temporal dependencies.  
-Rationale: LSTM Autoencoders capture nonlinear patterns and multi-step dependencies, improving anomaly sensitivity in financial series.
+**LSTM Autoencoder vs. classical statistical models (e.g., ARIMA)**: Autoregressive Integrated Moving Average (ARIMA) handles linear and stationary signals but struggles with nonlinear temporal dependencies.  LSTM Autoencoders capture nonlinear patterns and multi-step dependencies, improving anomaly sensitivity in financial series.
 
-**Reconstruction-based detection vs. prediction-based detection**  
-Alternative: Forecasting future values and measuring prediction error can infer anomalies.  
-Rationale: Reconstruction avoids forecasting noise and isolates structural deviations by measuring mismatch with known inputs.
+**Reconstruction-based detection vs. prediction-based detection**: Forecasting future values and measuring prediction error can infer anomalies. Reconstruction avoids forecasting noise and isolates structural deviations by measuring mismatch with known inputs.
 
-**Sliding window sequence formation vs. single-point modeling**  
-Alternative: Single-point modeling ignores temporal context.  
-Rationale: Window-based encoding captures richer micro-regime dynamics and enhances generalization.
-
-**Statistical thresholding vs. manual rule-based flagging**  
-Alternative: Rule-based detection depends on domain heuristics that do not generalize.  
-Rationale: Statistical thresholding adapts to data distributions and allows tunable sensitivity across different time series.
+**Sliding window sequence formation vs. single-point modeling**: Single-point modeling ignores temporal context. Window-based encoding captures richer micro-regime dynamics and enhances generalization.
 
 ---
 
 ## Key Insights & Impacts
-- LSTM Autoencoders provide adaptive sequence-level anomaly detection without labeled training data.
-- The architecture captures nonlinear dependencies and temporal context, which benefits financial markets where behaviors are regime-driven and rarely stationary.
 - Reconstruction-based anomaly detection generalizes across industries including manufacturing (sensor faults), cybersecurity (intrusions), and healthcare (patient monitoring).
 - From an analytical perspective, anomaly detection enhances risk surveillance, supports post-event attribution, and informs decision-making in time-sensitive environments.
 
 ---
 
-## Business Value & Use Cases
-This framework supports several analytics and risk-oriented applications:
-- Market event detection and attribution
-- Volatility surveillance and alerting
-- Risk management and exposure monitoring
-- Investment research and market diagnostics
-- Data quality assurance for downstream modeling
+## Model Evaluation
 
-Applicable across financial institutions, hedge funds, fintech platforms, and internal corporate analytics teams.
+We evaluate the model by comparing the reconstruction errors of the training data and test data, with the latter showing a significantly higher MAE due to the presence of anomalies. Additionally, the training loss (blue curve) remains low and steady showing the model is learning the training data well. 
+
+<img src="./images/MAE_train.png" width="" height="400">
+
+<img src="./images/MAE_test.png" width="" height="400">
+
+The validation loss curve (orange curve) is bumpy and shows great oscillation, as the unusual price pattern (anomalies) are hard to reconstruct resulting to large reconstruction error.
+
+<img src="./images/loss.png" width="" height="400">
 
 ---
 
 ## Results Summary
-The anomaly detection pipeline identified periods where reconstruction error spiked, indicating deviations from learned baseline behavior. These anomalies aligned with major market events including earnings announcements, notable corporate communications, and macroeconomic shocks that shifted volatility regimes. The alignment demonstrates that unsupervised deep learning can surface event-driven anomalies without labeled data, providing both analytical insight and monitoring value.
+The anomaly detection pipeline identified periods where reconstruction error spiked, indicating deviations from learned baseline behavior. These anomalies aligned with major market events as follows.
 
----
+- Nov 2024: Share prices surged on optimism of Donald Trump's election victory.
 
-## Visual Outputs (Recommended for Portfolio)
-Typical visual components that improve interpretability:
-- Time series chart with anomaly overlays
-- Reconstruction error curve over time
-- Reconstruction loss distribution with threshold
-- Zoomed event windows showing anomaly clusters
+- Dec 2024: After TSLA shares reached its all-time high on 17th Decemeber 2024, the shares plunged, due to weak market sentiment on trade tariffs by the US as well as TESLA's declining sales data.
+
+- Mar 2025: Shares extended further losses, amid market concerns over Elon Musk’s involvement with the Trump administration as well as the falling new vehicle sales.
+
+- Sep 2025: Elon Musk buying back $1bn in Tesla Shares, a signal of confidence of the company
+
+- Oct-Dec 2025: TSLA shares saw a strong recovery, thanks to strategic narrative shifts - positioning as an artificial intelligence (AI) and autonomy leader, not just an electric vehicle (EV) maker.
+
+<img src="./images/stock_prices.png" width="" height="500">
 
 ---
 
