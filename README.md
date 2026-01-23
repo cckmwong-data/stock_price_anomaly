@@ -42,7 +42,7 @@ This setup simulates realistic financial data workflows and preserves temporal o
 
 ---
 
-## Key Technical Decisions (with Alternatives and Rationale)
+## Key Technical Decisions
 
 **Unsupervised anomaly detection (LSTM Autoencoder) vs. supervised classification**: Supervised classification requires labeled anomalies, which are scarce and subjective in financial contexts.  Unsupervised learning enables detection of rare or previously unseen patterns without manual annotation.
 
