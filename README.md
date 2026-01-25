@@ -59,6 +59,18 @@ Data pre-processing steps included:
 
 ---
 
+### Integration with Fundamental Analysis
+
+Detecting price anomalies is valuable when paired with **fundamental analysis**, which estimates intrinsic value based on margins, growt and competitive positioning. The two methods operate on different horizons:
+
+*Fundamentals are slow-moving and persistent.*
+
+*Anomalies are fast-moving and can reflect sentiment, liquidity, or narrative shocks.*
+
+The combination enables several investment use cases help identify potential entry and exit points. *Downward anomalies* may signal temporary dislocations or liquidity-driven selling that creates potential *buying* opportunities, while *upward anomalies* may signal elevated risk or *profit-taking* conditions if fundamentals do not justify the move. In both cases, the anomaly identifies the when, and fundamentals determine the why.
+
+---
+
 ## Model Evaluation
 
 We evaluate the model by comparing the reconstruction errors of the training data and test data, with the latter showing a significantly higher MAE due to the presence of anomalies. 
