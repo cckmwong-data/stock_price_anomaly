@@ -59,7 +59,7 @@ Data pre-processing steps included:
 
 ---
 
-### Integration with Fundamental Analysis
+## Integration with Fundamental Analysis
 
 Detecting price anomalies is valuable when paired with **fundamental analysis**, which estimates intrinsic value based on margins, growt and competitive positioning. The two methods operate on different horizons:
 
