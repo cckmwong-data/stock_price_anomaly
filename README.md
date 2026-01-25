@@ -49,7 +49,7 @@ Data pre-processing steps included:
 
 **Sliding window sequence formation vs. single-point modeling**: Single-point modeling ignores temporal context. Window-based encoding captures more short-term market patterns and improves model performance.
 
-**Min-Max Scaling vs. StandardScaler**: Min-Max scaling is preferred because it preserves the structure of price movements and stabilizes the reconstruction proces, whereas StandardScaler, by contrast, centers and scales to variance.
+**MinMaxScaler vs. StandardScaler**: Min-Max scaler is preferred because it preserves the structure of price movements and stabilizes the reconstruction proces, whereas StandardScaler, by contrast, centers and scales to variance.
 
 ---
 
