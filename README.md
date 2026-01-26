@@ -1,6 +1,6 @@
 # Tesla Time Series Anomaly Detection with LSTM Autoencoder
 
-This project implements an unsupervised anomaly detection pipeline using an LSTM Autoencoder to identify abnormal movements in Tesla’s stock price between 2015 and 2025. This highlights market periods where price behavior deviates from learned historical patterns based on reconstruction error.
+This [project](https://github.com/cckmwong-data/stock_price_anomaly/blob/main/anomaly_LSTM_gh.ipynb) implements an unsupervised anomaly detection pipeline using an LSTM Autoencoder to identify abnormal movements in Tesla’s stock price between 2015 and 2025. This highlights market periods where price behavior deviates from learned historical patterns based on reconstruction error.
 
 <img src="./images/stock_prices.png" width="" height="500">
 
