@@ -9,7 +9,7 @@ This [project](https://github.com/cckmwong-data/stock_price_anomaly/blob/main/an
 ## Overview
 Financial markets are highly dynamic and influenced by numerous factors, including macroeconomic indicators, investor sentiment, and global events. Detecting anomalies in stock prices is essential for uncovering unusual patterns that may signal market manipulation, financial fraud, or rare investment opportunities.
 
-**Long Short-Term Memory (LSTM) autoencoder** is used to reconstruct stock price sequences. If the model struggles to accurately reconstruct a sequence (i.e., produces a large reconstruction error), the sequence likely contains anomalous behavior. *Anomalies are flagged when the deviation between the actual and reconstructed price exceeds the 95th percentile of the historical reconstruction error which is represented by Mean Absolute Error (MAE)*. 
+In this [project](https://github.com/cckmwong-data/stock_price_anomaly/blob/main/anomaly_LSTM_gh.ipynb), **Long Short-Term Memory (LSTM) autoencoder** is used to reconstruct stock price sequences. If the model struggles to accurately reconstruct a sequence (i.e., produces a large reconstruction error), the sequence likely contains anomalous behavior. *Anomalies are flagged when the deviation between the actual and reconstructed price exceeds the 95th percentile of the historical reconstruction error which is represented by Mean Absolute Error (MAE)*. 
 
 ---
 
