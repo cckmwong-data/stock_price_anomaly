@@ -98,6 +98,8 @@ The anomaly detection pipeline identified periods where reconstruction error spi
 
 - **Oct-Dec 2025**: TSLA shares saw a strong recovery, thanks to strategic narrative shifts - positioning the company as an artificial intelligence (AI) and autonomy leader, not just an electric vehicle (EV) maker.
 
+<img src="./images/anomalies.png" width="" height="400">
+
 <img src="./images/stock_prices.png" width="" height="500">
 
 ---
