@@ -9,6 +9,16 @@ This project serves as the technical engine of the strategy, utilizing an unsupe
 
 ---
 
+## The Integration: Fundamentals meet AI
+Most investment tools provide either financial data or technical indicators. This project integrates both to create a high-conviction decision engine:
+
+* **1. (This project) The Fundamental Core (Power BI):** Determines **Intrinsic Value** using a dynamic 10-year DCF model. It answers: *"What is this company actually worth?"*
+* **[2. The AI Layer (LSTM Autoencoder):](https://github.com/cckmwong-data/stock_price_anomaly)** Detects **Price Anomalies** in Tesla (TSLA) stock (2015-2025). It answers: *"Is the current market price deviating irrationally from historical patterns?"*
+
+**Strategic Use Case:** When the Power BI model shows a stock is undervalued, and the LSTM model flags a negative price anomaly (high reconstruction error), it signals a statistically significant **Mean Reversion** buying opportunity.
+
+---
+
 ## Overview
 Financial markets are highly dynamic and influenced by numerous factors, including macroeconomic indicators, investor sentiment, and global events. Detecting anomalies in stock prices is essential for uncovering unusual patterns that may signal market manipulation, financial fraud, or rare investment opportunities.
 
