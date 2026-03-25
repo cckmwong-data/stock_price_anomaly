@@ -1,6 +1,9 @@
 # Quantimental Strategy (Part 2): Time Series Anomaly Detection with LSTM Autoencoder
 
-"Quantimental" strategy comprises of two parts, quantitative and fundamental analysis. This [project](https://github.com/cckmwong-data/stock_price_anomaly/blob/main/anomaly_LSTM_gh.ipynb) implements an unsupervised anomaly detection pipeline using an LSTM Autoencoder to identify abnormal movements in Tesla’s stock price between 2015 and 2025. This highlights market periods where price behavior deviates from learned historical patterns based on reconstruction error. This works together with fundamental analysis which determines the intrinsic value of the stock.
+The "Quantimental" strategy represents a sophisticated investment framework that merges the structural depth of Fundamental Analysis with the algorithmic precision of Quantitative Modeling.
+
+This project serves as the technical engine of the strategy, utilizing an unsupervised Deep Learning pipeline to monitor market behavior. By implementing an LSTM Autoencoder, the system identifies abnormal price movements in Tesla’s (TSLA) stock between 2015 and 2025. While **[Part 1 (Fundamental Dashboard)](https://github.com/cckmwong-data/financial_analysis)** defines what the stock should be worth, this project identifies exactly when the market is deviating from historical norms.
+
 
 <img src="./images/stock_prices.png" width="" height="500">
 
