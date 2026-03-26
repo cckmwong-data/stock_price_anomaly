@@ -118,3 +118,8 @@ The anomaly detection pipeline identified periods where reconstruction error spi
 
 ## Author
 Carmen Wong
+
+---
+
+## Disclaimer
+*This project is for informational purposes only. The anomaly flags generated do not constitute financial advice. Always perform your own due diligence before making investment decisions.*
