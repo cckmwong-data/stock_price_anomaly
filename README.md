@@ -2,7 +2,7 @@
 
 The "Quantimental" strategy represents a sophisticated investment framework that merges the structural depth of Fundamental Analysis with the algorithmic precision of Quantitative Modeling.
 
-This project serves as the technical engine of the strategy, utilizing an unsupervised Deep Learning pipeline to monitor market behavior. By implementing an LSTM Autoencoder, the system identifies abnormal price movements in Tesla’s (TSLA) stock between 2015 and 2025. While **[Part 1 (Fundamental Dashboard)](https://github.com/cckmwong-data/financial_analysis)** defines what the stock should be worth, this project identifies exactly when the market is deviating from historical norms.
+This project serves as the technical engine of the strategy, utilizing an unsupervised Deep Learning pipeline to monitor market behavior. By implementing an LSTM Autoencoder, the system identifies abnormal price movements in Tesla’s (TSLA) stock between 2015 and 2025. While **[Part 1 (Fundamental Dashboard)](https://github.com/cckmwong-data/tech_fundamental_analysis)** defines what the stock should be worth, this project identifies exactly when the market is deviating from historical norms.
 
 <img src="./images/stock_prices.png" width="" height="500">
 
@@ -11,7 +11,7 @@ This project serves as the technical engine of the strategy, utilizing an unsupe
 ## The Integration: Fundamentals meet AI
 Most investment tools provide either financial data or technical indicators. This project integrates both to create a high-conviction decision engine:
 
-* **[1. The Fundamental Core](https://github.com/cckmwong-data/financial_analysis):** Determines **Intrinsic Value** using a dynamic 10-year DCF model. It answers: *"What is this company actually worth?"*
+* **[1. The Fundamental Core](https://github.com/cckmwong-data/tech_fundamental_analysis):** Determines **Intrinsic Value** using a dynamic 10-year DCF model. It answers: *"What is this company actually worth?"*
 * **2. The AI Layer (this project):** Detects **Price Anomalies** in Tesla (TSLA) stock (2015-2025). It answers: *"Is the current market price deviating irrationally from historical patterns?"*
 
 **Strategic Use Case:** When the Power BI model shows a stock is undervalued, and the LSTM model flags a negative price anomaly (high reconstruction error), it signals a statistically significant **Mean Reversion** buying opportunity.
