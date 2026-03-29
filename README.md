@@ -8,7 +8,7 @@ This project serves as the technical engine of the strategy, utilizing an unsupe
 
 ---
 
-## The Integration: Fundamentals meet AI
+## The Integration: Fundamentals + Technical Analysis
 Most investment tools provide either financial data or technical indicators. This project integrates both to create a high-conviction decision engine:
 
 * **[1. The Fundamental Core](https://github.com/cckmwong-data/tech_fundamental_analysis):** Determines **Intrinsic Value** using a dynamic 10-year DCF model. It answers: *"What is this company actually worth?"*
